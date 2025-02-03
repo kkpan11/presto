@@ -177,6 +177,7 @@
         <module>presto-kudu</module>
         <module>presto-elasticsearch</module>
         <module>presto-function-namespace-managers</module>
+        <module>presto-function-namespace-managers-common</module>
         <module>presto-expressions</module>
         <module>presto-benchmark-runner</module>
         <module>presto-spark-classloader-interface</module>
@@ -1018,6 +1019,12 @@
             </dependency>
 
             <dependency>
+                <groupId>com.facebook.presto</groupId>
+                <artifactId>presto-native-sidecar-plugin</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <dependency>
                 <groupId>com.facebook.hive</groupId>
                 <artifactId>hive-dwrf</artifactId>
                 <version>0.8.7</version>
@@ -1446,7 +1453,7 @@
             <dependency>
                 <groupId>org.apache.thrift</groupId>
                 <artifactId>libthrift</artifactId>
-                <version>0.9.3</version>
+                <version>0.9.3-1</version>
                 <exclusions>
                     <exclusion>
                         <groupId>org.apache.httpcomponents</groupId>
